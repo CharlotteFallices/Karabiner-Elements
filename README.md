@@ -63,8 +63,8 @@ The  script will create a redistributable **Karabiner-Elements-VERSION.dmg** in 
 
 Karabiner-Elements在源代码树中使用一些预编译的二进制文件。
 
--`src / vendor / Karabiner-VirtualHIDDevice / dist / *。kext`
--`src / vendor / Sparkle / Sparkle.framework`
+- src/vendor/Karabiner-VirtualHIDDevice/dist/*.kext
+- src/vendor/Sparkle/Sparkle.framework
 
 上面的`make package`命令不会重建这些二进制文件<br/>
 (这些二进制文件将复制到分布式程序包(distributed package)中)
