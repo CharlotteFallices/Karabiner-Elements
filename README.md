@@ -3,15 +3,15 @@
 
 # Karabiner-Elements
 
-Karabiner-Elements is a powerful utility for keyboard customization on macOS Sierra or later.
+Karabiner-Elements可在macOS Sierra或更高版本上自定义键盘.
 
 ## Download
 
-You can download Karabiner-Elements from [official site](https://pqrs.org/osx/karabiner/).
+您可以从[这里](https://pqrs.org/osx/karabiner/)下载Karabiner-Elements.
 
 ### Old releases
 
-You can download previous versions of Karabiner-Elements from [here](https://pqrs.org/osx/karabiner/history.html).
+您可以从[这里](https://pqrs.org/osx/karabiner/history.html)下载Karabiner-Elements的早期版本.
 
 ## Supported systems
 
@@ -26,7 +26,7 @@ You can download previous versions of Karabiner-Elements from [here](https://pqr
 
 ## Donations
 
-If you would like to contribute financially to the development of Karabiner Elements, donations can be made via <https://pqrs.org/osx/karabiner/pricing.html>
+如果您想为Karabiner Elements做出`经济贡献`,您可以通过<https://pqrs.org/osx/karabiner/pricing.html>进行捐赠.
 
 ---
 
@@ -34,7 +34,7 @@ If you would like to contribute financially to the development of Karabiner Elem
 
 ### How to build
 
-System requirements to build Karabiner-Elements:
+编译Karabiner-Elements的系统要求:
 
 -   macOS 10.14+
 -   Xcode 10+
@@ -43,7 +43,7 @@ System requirements to build Karabiner-Elements:
 
 #### Step 1: Getting source code
 
-Clone the source from github.
+请从[Gitub](https://github.com/CharlotteFallices/Karabiner-Elements)克隆仓库:
 
 ```shell
 git clone --depth 1 https://github.com/pqrs-org/Karabiner-Elements.git
@@ -56,25 +56,25 @@ cd Karabiner-Elements
 make package
 ```
 
-The `make` script will create a redistributable **Karabiner-Elements-VERSION.dmg** in the current directory.
+The  script will create a redistributable **Karabiner-Elements-VERSION.dmg** in the current directory.
+`make`脚本将在当前目录中创建可重新构建(redistributable)的**Karabiner-Elements-VERSION.dmg** .
 
 #### Note: About pre-built binaries in the source tree
 
-Karabiner-Elements uses some pre-built binaries in the source tree.
+Karabiner-Elements在源代码树中使用一些预编译的二进制文件。
 
--   `src/vendor/Karabiner-VirtualHIDDevice/dist/*.kext`
--   `src/vendor/Sparkle/Sparkle.framework`
+-`src / vendor / Karabiner-VirtualHIDDevice / dist / *。kext`
+-`src / vendor / Sparkle / Sparkle.framework`
 
-Above `make package` command does not rebuild these binaries.<br/>
-(These binaries will be copied in the distributed package.)
+上面的`make package`命令不会重建这些二进制文件<br/>
+(这些二进制文件将复制到分布式程序包(distributed package)中)
 
-If you want to rebuild these binaries, you have to build them manually.<br/>
-Please follow the instruction of these projects.
-
+如果要重建这些二进制文件,则必须手动进行编译.<br/>
+请遵循这些(?)项目的要求(instruction).
 ##### About rebuilding kext in Karabiner-VirtualHIDDevice
 
-If you want to build kext in Karabiner-VirtualHIDDevice, macOS requires a valid certificate which be able to sign the built kext.<br/>
-Unless such certificate, macOS refuses to load the built kext.<br/>
-Please read a documentation about [System Integrity Protection Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/System_Integrity_Protection_Guide/KernelExtensions/KernelExtensions.html) for more details.
+如果要在`Karabiner-VirtualHIDDevice`中编译kext,则可能需要一个有效的证书,该证书可以对已编译的kext进行签名.<br/>
+除非有此类证书,否则系统将拒绝加载内置的kext.<br/>
+有关更多详细信息，请阅读[System Integrity Protection Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/System_Integrity_Protection_Guide/KernelExtensions/KernelExtensions.html).
 
-(We are including the pre-built kext binary to avoid the restriction that macOS requires a uncommon certificate.)
+（我们添加了预编译的kext二进制文件,以避免证书的限制)
